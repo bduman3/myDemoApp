@@ -1,8 +1,10 @@
 package com.mycompany.app;
 
+import static spark.Spark.*;
+
 import java.util.ArrayList;
 import java.util.Arrays;
-import static spark.Spark.*;
+
 
 import java.util.HashMap;
 import java.util.List;
@@ -42,7 +44,9 @@ public class App
           String input2 = req.queryParams("input2").replaceAll("\\s","");
           int input2AsInt = Integer.parseInt(input2);
 
-	int input3AsInt = 0;
+	String input3 = req.queryParams("input3").replaceAll("\\s","");
+
+	int input3AsInt = Integer.parseInt(input3);
 
           boolean result = App.search(inputList, input2AsInt, input3AsInt);
 

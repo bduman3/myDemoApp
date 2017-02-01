@@ -52,6 +52,14 @@ public class AppTest
     public void testNull(){
 	assertFalse(new App().search(null,8,10));
     }
+    public void oneNegative(){
+	ArrayList<Integer> array = new ArrayList<>(Arrays.asList(54,63,72,-99));
+	assertTrue(new App().search(array,-9,11));
+    }
+    public void twoNegatives(){
+	ArrayList<Integer> array = new ArrayList<>(Arrays.asList(54,63,72,-99));
+	assertTrue(new App().search(array,-9,8));
+    }
 
 
 
